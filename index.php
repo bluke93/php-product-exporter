@@ -6,13 +6,17 @@
 <?php 
 
 require 'config/constants.php';
-require 'functions/products.php';
-require 'functions/csv.php';
+require 'src/methods.php';
+
 
 
 $url = getAPIURL();
 $maxRetries = MAX_RETRIES;
 $result = getProductList($url, $maxRetries);
+
+print("<pre>".print_r($result,true)."</pre>");
+
+
 
 if($result["success"] == true && $result["status_code"] == 200){
   $productList = $result["data"];

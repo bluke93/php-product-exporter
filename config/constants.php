@@ -1,7 +1,7 @@
 <?php 
 
 //
-define("BASE_URL", "easyapi5.eswportal.it");
+define("BASE_URL", "https://easyapi5.eswportal.it");
 define("API_PATH", "api");
 define("API_VERSION", "v1");
 define("DB_CONNECTION", "252_OVM_VICENZA");
