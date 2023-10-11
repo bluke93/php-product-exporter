@@ -4,6 +4,7 @@ require_once 'config/constants.php';
 require_once 'methods/request.php';
 require_once 'methods/process.php';
 require_once 'methods/exporter.php';
+require_once 'methods/importer.php';
 
 // Check if the 'startDate' parameter exists in the query string
 if (isset($_GET['startDate'])) {
@@ -18,6 +19,7 @@ $apiUrl = buildAPIUrl($startDate);
 $maxRetries = MAX_RETRIES;
 $result = sendAPIRequest($apiUrl, $maxRetries);
 $productList = extractData($result);
+$mappedHeaders = getHeaderMappings();
 
 
 
@@ -28,4 +30,4 @@ $productList = extractData($result);
 // EXPORTING DATA
 
 
-echo '<pre>'. print_r($productList, true) .'</pre>';
+echo '<pre>'. print_r($mappedHeaders, true) .'</pre>';

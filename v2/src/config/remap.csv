@@ -1,0 +1,14 @@
+original,updated
+codice,COD
+modello,Nome
+descrizione,Descrizione
+prezzo,Prezzo di listino
+taglia,Attributo 1 valuta(e)
+misure,Attributo 2 valuta(e)
+stile,Attributo 3 valuta(e)
+note_ordine,Attributo 6 valuta(e)
+fornitore,Attributo 10 valuta(e)
+codice 2,TIPO_POLITICA_APPRV
+note,TIPO_POLITICA_VENDT
+qta_minima,CONFEZIONI_COLLO
+condizioni temporali standard,LEAD TIME

@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * Builds the API URL for the given start date.
+ *
+ * @param string $startDate The start date in string format.
+ * @return string The full API URL.
+ */
 function buildAPIUrl($startDate){
   $baseUrl = "https://".BASE_URL."/".API_PATH."/".API_VERSION."/".DB_CONNECTION;
 
@@ -10,6 +16,13 @@ function buildAPIUrl($startDate){
   return $fullUrl;
 }
 
+/**
+ * Sends a GET request to the API.
+ *
+ * @param string $url The full API URL.
+ * @param int $maxRetries The maximum number of retries.
+ * @return array The response from the API.
+ */
 function sendAPIRequest($url, $maxRetries = 5){
   // Setup CURL
   $curl = curl_init();
@@ -72,6 +85,12 @@ function sendAPIRequest($url, $maxRetries = 5){
   }while($retries <= $maxRetries);
 }
 
+/**
+ * Extracts the data from the API response.
+ *
+ * @param array $result The API response.
+ * @return array The data from the API response.
+ */
 function extractData($result){
   return $result["data"];
 }
