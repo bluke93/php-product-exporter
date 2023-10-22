@@ -12,6 +12,7 @@ Using it without parameter will cause the script to use the current date.
 Using it with the `startDate` parameter will cause the script to fetch the product from that date onwards.
 > http://localhost:3000/src/main.php?startDate=2023-05-01
 
+Make sure that the files `/src/config/exportKeys.csv` and `/src/config/remap.csv` exists, they contains the required data to remap the product list from the CRM to the Wordpress.
 
 ## How is structured
 
