@@ -14,6 +14,8 @@ Using it with the `startDate` parameter will cause the script to fetch the produ
 
 Make sure that the files `/src/config/exportKeys.csv` and `/src/config/remap.csv` exists, they contains the required data to remap the product list from the CRM to the Wordpress.
 
+Once the process is finished, the latest created CSV file will be located in `src/dist` ready to be downloaded and imported into the wordpress platform.
+
 ## How is structured
 
 ### Requesting
