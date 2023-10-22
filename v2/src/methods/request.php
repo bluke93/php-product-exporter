@@ -7,7 +7,7 @@
  * @return string The full API URL.
  */
 function buildAPIUrl($startDate){
-  $baseUrl = "https://".BASE_URL."/".API_PATH."/".API_VERSION."/".DB_CONNECTION;
+  $baseUrl = BASE_URL."/".API_PATH."/".API_VERSION."/".DB_CONNECTION;
 
   $endpoint = str_replace("{codice_negozio}", STORE_ID, API_ENDPOINT);
   $endpoint = str_replace("{startDateString}", $startDate, $endpoint);

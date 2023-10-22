@@ -30,4 +30,4 @@ $mappedHeaders = getHeaderMappings();
 // EXPORTING DATA
 
 
-echo '<pre>'. print_r($mappedHeaders, true) .'</pre>';
+echo '<pre>'. print_r($result, true) .'</pre>';
