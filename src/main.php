@@ -13,7 +13,6 @@ if (isset($_GET['startDate'])) {
     $startDate = date('Y-m-d');
 }
 
-
 // REQUEST AND RETRIEVING DATA
 $apiUrl = buildAPIUrl($startDate);
 $maxRetries = MAX_RETRIES;
@@ -21,16 +20,12 @@ $result = sendAPIRequest($apiUrl, $maxRetries);
 $productList = extractData($result);
 $mappedHeaders = getHeaderMappings();
 
-
-
 // PROCESSING DATA
 $replacedKeys = replaceKeys($productList, $mappedHeaders);
 $finalExportKeys = getFinalExportKeys();
 $remappedProducts = filterByKeys($replacedKeys, $finalExportKeys);
 $finalExportProducts = addMissingKeys($remappedProducts, $finalExportKeys);
 
-
 // EXPORTING DATA
-
-
-echo '<pre>'. print_r($finalExportProducts, true) .'</pre>';
+$filename = date('d-m-Y_His').'.csv';
+exportToCsv($filename, $finalExportProducts, 'dist');
