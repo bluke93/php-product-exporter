@@ -24,10 +24,13 @@ $mappedHeaders = getHeaderMappings();
 
 
 // PROCESSING DATA
-
+$replacedKeys = replaceKeys($productList, $mappedHeaders);
+$finalExportKeys = getFinalExportKeys();
+$remappedProducts = filterByKeys($replacedKeys, $finalExportKeys);
+$finalExportProducts = addMissingKeys($remappedProducts, $finalExportKeys);
 
 
 // EXPORTING DATA
 
 
-echo '<pre>'. print_r($result, true) .'</pre>';
+echo '<pre>'. print_r($finalExportProducts, true) .'</pre>';
