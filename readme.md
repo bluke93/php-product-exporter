@@ -1,5 +1,17 @@
 # PHP Product Exporter (beta)
 
+- [Overview](#overview)
+- [How to use](#how-to-use)
+- [Structure](#structure)
+  - [Requesting](#requesting)
+  - [Importing](#importing)
+  - [Processing](#processing)
+  - [Exporting](#exporting)
+- [Configuration](#configuration)
+- [Output](#output)
+
+## Overview
+
 This PHP script is designed to export data from a CRM and upload it to a WordPress site that functions as an ecommerce platform. The script is divided into four parts: requesting, importing, processing, and exporting. Each part has its own methods that manage the different aspects of the overall process. By dividing the script into these parts, it becomes easier to manage and maintain the codebase. This script is written in PHP.
 
 ## How to use
@@ -16,7 +28,7 @@ Make sure that the files `/src/config/exportKeys.csv` and `/src/config/remap.csv
 
 Once the process is finished, the latest created CSV file will be located in `src/dist` ready to be downloaded and imported into the wordpress platform.
 
-## How is structured
+## Structure
 
 ### Requesting
 
@@ -49,4 +61,3 @@ All the configuration is stored in the `/src/config` folder.
 All the exported CSV are located in the `/src/dist` folder. The exported files are named with current datetime (`d-m-Y_his`) of when has been generated.
 
 > 22-10-2023_174818.csv
-
