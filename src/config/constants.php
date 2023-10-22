@@ -13,7 +13,6 @@ define("MAX_RETRIES", 5);
 
 // Paths
 define("IMAGES_PATH", 'images');
-define("EXPORTED_PATH", 'exports');
 define("CONFIG_PATH", __DIR__)
 
 ?>

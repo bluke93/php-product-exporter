@@ -8,7 +8,7 @@
  *
  * @return array An associative array where the keys are the original headers and the values are the updated headers.
  */
-function getHeaderMappings(){
+function getHeaderMappings(): array{
   $filename = CONFIG_PATH.'/remap.csv';
   $data = array();
   if (($handle = fopen($filename, "r")) !== FALSE) {
@@ -35,7 +35,7 @@ function getHeaderMappings(){
  *
  * @return array An array containing the final export keys.
  */
-function getFinalExportKeys() {
+function getFinalExportKeys(): array {
   $filename = CONFIG_PATH.'/exportKeys.csv';
   $data = array();
   if (($handle = fopen($filename, "r")) !== FALSE) {

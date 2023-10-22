@@ -6,7 +6,7 @@
  * @param string $startDate The start date in string format.
  * @return string The full API URL.
  */
-function buildAPIUrl($startDate){
+function buildAPIUrl(string $startDate): string {
   $baseUrl = BASE_URL."/".API_PATH."/".API_VERSION."/".DB_CONNECTION;
 
   $endpoint = str_replace("{codice_negozio}", STORE_ID, API_ENDPOINT);
@@ -23,7 +23,7 @@ function buildAPIUrl($startDate){
  * @param int $maxRetries The maximum number of retries.
  * @return array The response from the API.
  */
-function sendAPIRequest($url, $maxRetries = 5){
+function sendAPIRequest(string $url, int $maxRetries = 5): array{
   // Setup CURL
   $curl = curl_init();
   $retries = 0;
@@ -91,6 +91,6 @@ function sendAPIRequest($url, $maxRetries = 5){
  * @param array $result The API response.
  * @return array The data from the API response.
  */
-function extractData($result){
+function extractData(array $result): array{
   return $result["data"];
 }
