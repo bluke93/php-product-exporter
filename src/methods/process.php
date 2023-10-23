@@ -39,7 +39,7 @@ function filterByKeys(array $elements, array $keys): array
   foreach ($elements as $element) {
     $newElement = [];
     foreach ($element as $key => $value) {
-      if (in_array($key, array_values($keys))) {
+      if (in_array($key, array_values($keys[0]))) {
         $newElement[$key] = $value;
       }
     }
@@ -50,23 +50,22 @@ function filterByKeys(array $elements, array $keys): array
 
 
 /**
- * Adds missing keys to each product in the array by setting their value to null.
+ * Adds missing keys to each product in the array by setting their value to a default value.
  *
  * @param array $products An array of products.
  * @param array $values An array of keys to add to each product.
  * @return array An array of products with the missing keys added.
  */
-function addMissingKeys(array $products, array $values): array {
+function addMissingKeys(array $products, array $missingKeys): array {
   $result = [];
   foreach ($products as $product) {
     $newProduct = $product;
-    foreach ($values as $key => $value) {
+    foreach ($missingKeys[0] as $key => $value) {
       if (!isset($newProduct[$value])) {
-        $newProduct[$value] = null;
+        $newProduct[$value] = $missingKeys[1][$key];
       }
     }
     $result[] = $newProduct;
   }
   return $result;
 }
-

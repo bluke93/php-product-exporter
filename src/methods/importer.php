@@ -44,5 +44,5 @@ function getFinalExportKeys(): array {
     }
     fclose($handle);
   }
-  return $data[0];
+  return $data;
 }

@@ -29,3 +29,8 @@ $finalExportProducts = addMissingKeys($remappedProducts, $finalExportKeys);
 // EXPORTING DATA
 $filename = date('d-m-Y_His').'.csv';
 exportToCsv($filename, $finalExportProducts, 'dist');
+
+echo 'API CALL RESULT: '.($result['success'] ? 'SUCCESS' : 'FAILED').'<br>';
+echo 'Products from API: '.count($productList).'<br>';
+echo 'Products after processing: '.count($finalExportProducts).'<br>';
+echo '<pre>'. print_r($finalExportProducts, true) .'</pre>';
