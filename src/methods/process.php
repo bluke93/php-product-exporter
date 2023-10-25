@@ -69,3 +69,20 @@ function addMissingKeys(array $products, array $missingKeys): array {
   }
   return $result;
 }
+
+
+/**
+ * Orders the keys of each product in the given array according to the specified order.
+ *
+ * @param array $products The array of products to process.
+ * @param array $orderKeys The array of keys to order the products by.
+ * @return array The processed array of products with ordered keys.
+ */
+function orderKeys(array $products, array $orderKeys): array {
+  $result = [];
+  foreach ($products as $product){
+    $newProduct = $product;
+    $result[] = array_replace(array_flip($orderKeys[0]), $newProduct);
+  }
+  return $result;
+}
