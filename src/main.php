@@ -35,3 +35,4 @@ echo 'API CALL RESULT: '.($result['success'] ? 'SUCCESS' : 'FAILED').'<br>';
 echo 'Products from API: '.count($productList).'<br>';
 echo 'Products after processing: '.count($sortedExportProductList).'<br>';
 echo '<pre>'. print_r($sortedExportProductList, true) .'</pre>';
+
