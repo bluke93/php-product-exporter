@@ -61,3 +61,8 @@ All the configuration is stored in the `/src/config` folder.
 All the exported CSV are located in the `/src/dist` folder. The exported files are named with current datetime (`d-m-Y_his`) of when has been generated.
 
 > 22-10-2023_174818.csv
+
+## Extending the script
+
+Coming soon...
+
