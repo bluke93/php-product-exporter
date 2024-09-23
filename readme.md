@@ -62,4 +62,7 @@ All the exported CSV are located in the `/src/dist` folder. The exported files a
 
 > 22-10-2023_174818.csv
 
+## Extending the script
+
+Coming soon...
 
