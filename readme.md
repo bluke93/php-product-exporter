@@ -9,6 +9,8 @@
   - [Exporting](#exporting)
 - [Configuration](#configuration)
 - [Output](#output)
+- [Disclaimer](#disclaimer)
+  - [Scenario](#scenario)
 
 ## Overview
 
@@ -65,9 +67,12 @@ All the exported CSV are located in the `/src/dist` folder. The exported files a
 
 ## Disclaimer
 
-This is just a simple and minimal script to deal with some tailored necessities for a freelance client of mine. 
-In the specific: was something to attach to a cronjob and do the process everyday for the new products where wordpress and his plugins couldn't.
+This is a simple and minimal script designed to address specific needs for a freelance client. It was created to work alongside a cron job, automating a process that WordPress and its plugins couldn't fully handle.
 
 ### Scenario
 
-For example: The user created a new product or a new product variant on the main PIM software, PIM software exposed to APIs to allow multicanal distribution of the information. This script retrieves the data from the APIs response, checks the difference between the previous files (if any) and adds what's new or patched from the PIM. This retrieved and remapped data is stored inside a CSV file. The a user, by hand, needed to insert some specifc data in custom columns in some cases that are not retrievable from the PIM and wanna mass insert instead of doing it 1 by 1 in wordpress (there is not a real rule or criteria, that's why is not possible to automatise it). The CSV so gets updated/completed with the missing data and kept inside a specific folder where a cronjob, every start of the day, reads from it and bulk uploads all the new data into the database and make it available in woocommerce products list.
+The client manages products through a PIM (Product Information Management) software that exposes data via APIs for multichannel distribution. Whenever a new product or variant is created in the PIM, this script retrieves the latest data from the API response, compares it with previous records (if available), and updates a CSV file with any new or modified entries.
+
+However, some product information cannot be automatically retrieved from the PIM and must be manually added. Since there's no fixed rule or pattern for this missing data, the user manually updates the CSV instead of editing each product one by one in WordPress.
+
+Once completed, the CSV is stored in a designated folder. A cron job runs daily, reading the file and performing a bulk upload of the new data into the database, making the products available in the WooCommerce catalog.
